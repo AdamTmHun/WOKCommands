@@ -190,9 +190,9 @@ module.exports = {
                                             mainName = names.shift();
                                             desc += "\n\n#" + ++counter + ") **" + mainName + "**" + (description ? ' - ' : '') + description;
                                             if (names.length) {
-                                                desc += "\n" + instance.messageHandler.getEmbed(guild, 'HELP_MENU', 'ALIASES') + ": \"" + names.join('", "') + "\"";
+                                                desc += "\n" + instance.messageHandler.getEmbed(guild, 'HELP_MENU', 'ALIASES') + ": `" + names.join('", "') + "`";
                                             }
-                                            desc += "\n" + instance.messageHandler.getEmbed(guild, 'HELP_MENU', 'SYNTAX') + ": \"" + instance.getPrefix(guild) + mainName + (syntax ? ' ' : '') + syntax + "\"";
+                                            desc += "\n" + instance.messageHandler.getEmbed(guild, 'HELP_MENU', 'SYNTAX') + ": `" + instance.getPrefix(guild) + mainName + (syntax ? ' ' : '') + syntax + "`";
                                         }
                                     }
                                     embed.setDescription(desc);
